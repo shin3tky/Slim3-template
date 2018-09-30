@@ -20,6 +20,7 @@ A template for Slim3 PHP framework.
 ~~~
 $ git clone https://github.com/shin3tky/Slim3-template.git
 $ cd Slim3-template
+$ composer install
 $ ./start.sh
 ~~~
 
