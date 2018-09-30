@@ -1,0 +1,27 @@
+{
+    "name": "shin3tky/slim3-template",
+    "description": "A template for Slim3 PHP framework.",
+    "license": "Apache License Version 2.0",
+    "authors": [
+        {
+            "name": "Shinichi Morita",
+            "email": "shin3tky@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "Controller/",
+            "Model\\": "Model/",
+            "Service\\": "Service/",
+            "Util\\": "Util/"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.0",
+        "j4mie/idiorm": "^1.5",
+        "monolog/monolog": "^1.23"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.13"
+    }
+}

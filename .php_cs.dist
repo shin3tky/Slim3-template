@@ -1,0 +1,40 @@
+<?php
+namespace PhpCsFixer;
+
+return Config::create()
+    ->setRiskyAllowed(true)
+    ->setRules([
+        '@PSR2' => true,
+        'single_import_per_statement' => false,
+        'single_quote' => true,
+        'binary_operator_spaces' => true,
+        'whitespace_after_comma_in_array' => true,
+        'space_after_semicolon' => [
+            'remove_in_empty_for_expressions' => true,
+        ],
+        'no_whitespace_in_blank_line' => true,
+        'array_syntax' => [
+            'syntax' => 'short',
+        ],
+        'list_syntax' => [
+            'syntax' => 'short',
+        ],
+        'concat_space' => [
+            'spacing' => 'one',
+        ],
+        'return_type_declaration' => [
+            'space_before' => 'one',
+        ],
+        'blank_line_before_statement' => [
+            'statements' => [
+                'return',
+                'throw',
+                'try'
+            ],
+        ],
+    ])
+    ->setFinder(
+        Finder::create()
+            ->exclude('vendors')
+            ->in(__DIR__)
+    );

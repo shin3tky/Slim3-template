@@ -1,0 +1,9 @@
+/vendor/*
+/logs/*
+
+.DS_Store
+.php_cs.cache
+
+!.gitkeep
+
+composer.lock
