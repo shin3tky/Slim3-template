@@ -2,47 +2,6 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$configs = [
-    'local' => [
-        'settings' => [
-            'displayErrorDetails' => true,
-
-            'database' => [
-                'connection_string' => 'mysql:host=localhost;dbname=dbname;charset=utf8mb4',
-                'username' => 'dbuser',
-                'password' => 'dbpass'
-            ],
-
-            'logger' => [
-                'name' => 'app',
-                'path' => APP_ROOT . '/logs/app.log',
-                'level' => Monolog\Logger::DEBUG
-            ],
-
-            'version' => '0.0.1'
-        ]
-    ],
-    'staging' => [
-        'settings' => [
-            'displayErrorDetails' => false,
-
-            'database' => [
-                'connection_string' => 'mysql:host=localhost;dbname=dbname;charset=utf8mb4',
-                'username' => 'dbuser',
-                'password' => 'dbpass'
-            ],
-
-            'logger' => [
-                'name' => 'app',
-                'path' => APP_ROOT . '/logs/app.log',
-                'level' => Monolog\Logger::DEBUG
-            ],
-
-            'version' => '0.0.1'
-        ]
-    ]
-];
-
 $env = isset($_SERVER['APP_ENV']) ? $_SERVER['APP_ENV'] : 'local';
 
 $app = new \Slim\App($configs[$env]);

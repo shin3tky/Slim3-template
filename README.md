@@ -39,7 +39,7 @@ You get a JSON response.
 
 ## Configuration
 
-1. Modify `database` and `logger` sections in settings.php.
+1. Modify `database` and `logger` sections in configs.php.
 2. Set the environment variable name described in conf.d/nginx_vhost.conf and settings.php to the same value. (default value is `APP_ENV`.)
 
 
