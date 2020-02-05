@@ -4,6 +4,17 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 $env = isset($_SERVER['APP_ENV']) ? $_SERVER['APP_ENV'] : 'local';
 
+// batch
+// APP_ENV=local php ./webroot/index.php 'commandName'
+if (isset($GLOBALS['argv'][1])) {
+    $commandName = $GLOBALS['argv'][1];
+    $configs[$env]['environment'] = \Slim\Http\Environment::mock(
+        [
+            'REQUEST_URI' => '/' . $commandName,
+        ]
+    );
+}
+
 $app = new \Slim\App($configs[$env]);
 
 $container = $app->getContainer();

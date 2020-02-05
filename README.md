@@ -47,3 +47,16 @@ You get a JSON response.
 
 - Using php-cs-fixer.
 - You can change the setting in file `.php_cs.dist`.
+
+
+## Execute batch mode
+
+~~~
+$ sh ./batch.sh
+~~~
+
+You get a JSON response on the console screen.
+
+~~~
+{"version":"0.0.1"}
+~~~
